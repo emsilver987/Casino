@@ -12,9 +12,15 @@ enum Rank {
     }
 
     public int getValue() {
-        return value;
+        if (value == 10 || value == 11 || value == 12){
+            return 10;
+        } else if (value == 13) {
+            return 1; //or 11 to be dealt with later
+        }
+        else{
+            return value;
+        }
     }
-
 }
 
 public class BlackjackCard {

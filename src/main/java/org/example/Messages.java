@@ -7,6 +7,7 @@ public class Messages {
     private static final String playerBusts = "You Bust, you lose!";
     private static final String hitOrStay = "Do You Hit or Stay?";
     private static final String playerScore = "Your Cards Total: ";
+    private static final String invalidMessage = "Invalid Message";
 
     public static String getWelcomeMessage() {
         return welcome;
@@ -25,5 +26,8 @@ public class Messages {
     }
     public static String getPlayerScoreMessage(int playerScoreInt) {
         return playerScore + playerScoreInt ;
+    }
+    public static String getInvalidMessage() {
+        return invalidMessage;
     }
 }
