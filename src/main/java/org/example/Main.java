@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(Messages.getWelcomeMessage());
         System.out.println(Messages.getWelcomeBlackjackMessage());
-
+        Initialize initialize = new Initialize();
+        initialize.generateCards();
     }
 }
