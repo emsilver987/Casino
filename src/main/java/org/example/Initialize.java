@@ -15,9 +15,9 @@ public class Initialize {
        BlackjackCard newCard = new BlackjackCard();
        Calculations calc = new Calculations();
        int card1Val = newCard.getValue();
-       cardSum = calc.cardSum(cardSum, card1Val);
-       System.out.println("New Card: " + newCard + "\nYour Total: " + cardSum);
-       return cardSum;
+       int newCardSum = calc.cardSum(cardSum, card1Val);
+       System.out.println("New Card: " + newCard + "\nYour Total: " + newCardSum);
+       return newCardSum;
    }
 
 }

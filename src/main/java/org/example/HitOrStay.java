@@ -3,22 +3,27 @@ package org.example;
 import java.util.Scanner;
 
 public class HitOrStay {
-    public void determineHitOrStay(String userInput, int cardSum) {
+    public int determineHitOrStay(String userInput, int cardSum) {
         if (userInput.equalsIgnoreCase("hit")) {
-            hit(cardSum);
+            cardSum = hit(cardSum);
+            return cardSum;
         }
         else if (userInput.equalsIgnoreCase("stay")) {
             stay(cardSum);
+            return cardSum;
         }
         else{
             System.out.println(Messages.getInvalidMessage());
+            return -1;
         }
     }
     public int hit(int cardSum){
         Initialize initialize = new Initialize();
         cardSum = initialize.generateNewCard(cardSum);
         Calculations calculations = new Calculations();
-        calculations.isBust(cardSum);
+        if (calculations.isBust(cardSum)){
+            System.exit(0);
+        }
         return cardSum;
     }
     public void stay(int cardSum){
