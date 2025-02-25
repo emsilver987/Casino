@@ -9,10 +9,15 @@ public class Main {
         Initialize initialize = new Initialize();
         int cardSum = initialize.generateCards();
         System.out.println(Messages.getHitOrStayMessage());
-        Scanner userInput = new Scanner(System.in);
-        String hitOrStayInput = userInput.nextLine();
-        HitOrStay hitOrStay = new HitOrStay();
-        hitOrStay.determineHitOrStay(hitOrStayInput, cardSum);
-
+//        String hitOrStayInput = userInput.nextLine();
+//        HitOrStay hitOrStay = new HitOrStay();
+//        hitOrStay.determineHitOrStay(hitOrStayInput, cardSum);
+        Calculations calculations = new Calculations();
+        while (!calculations.isBust(cardSum)){
+            Scanner userInput = new Scanner(System.in);
+            String hitOrStayInput = userInput.nextLine();
+            HitOrStay hitOrStay = new HitOrStay();
+            hitOrStay.determineHitOrStay(hitOrStayInput, cardSum);
+        }
     }
 }

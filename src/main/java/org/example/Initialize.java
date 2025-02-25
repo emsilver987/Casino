@@ -8,15 +8,16 @@ public class Initialize {
        int card1Val = card1.getValue();
        int card2Val = card2.getValue();
        int cardSum = calc.cardSum(card1Val, card2Val);
-       System.out.println("Card 1: " + card1 + "\nCard 2: " + card2 + "\nYour Total: " + cardSum);
+       System.out.println("Card 1: " + card1 + "\nCard 2: " + card2 + "\nTotal: " + cardSum);
        return cardSum;
    }
-   public void generateNewCard(int cardSum){
+   public int generateNewCard(int cardSum){
        BlackjackCard newCard = new BlackjackCard();
        Calculations calc = new Calculations();
        int card1Val = newCard.getValue();
        cardSum = calc.cardSum(cardSum, card1Val);
        System.out.println("New Card: " + newCard + "\nYour Total: " + cardSum);
+       return cardSum;
    }
 
 }

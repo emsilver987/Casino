@@ -8,17 +8,25 @@ public class HitOrStay {
             hit(cardSum);
         }
         else if (userInput.equalsIgnoreCase("stay")) {
-            stay();
+            stay(cardSum);
         }
         else{
             System.out.println(Messages.getInvalidMessage());
         }
     }
-    public void hit(int cardSum){
+    public int hit(int cardSum){
         Initialize initialize = new Initialize();
-        initialize.generateNewCard(cardSum);
+        cardSum = initialize.generateNewCard(cardSum);
+        Calculations calculations = new Calculations();
+        calculations.isBust(cardSum);
+        return cardSum;
     }
-    public void stay(){
+    public void stay(int cardSum){
+        Initialize initialize = new Initialize();
+        int dealerSum = initialize.generateCards();
+        while (dealerSum < cardSum){
+            dealerSum = hit(dealerSum);
+        }
 
     }
 }
