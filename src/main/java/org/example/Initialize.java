@@ -16,7 +16,7 @@ public class Initialize {
        Calculations calc = new Calculations();
        int card1Val = newCard.getValue();
        int newCardSum = calc.cardSum(cardSum, card1Val);
-       System.out.println("New Card: " + newCard + "\nYour Total: " + newCardSum);
+       System.out.println("New Card: " + newCard + "\nNew Total: " + newCardSum);
        return newCardSum;
    }
 

@@ -26,12 +26,21 @@ public class HitOrStay {
         }
         return cardSum;
     }
+    // Function Responsible for Dealer Dealing
     public void stay(int cardSum){
         Initialize initialize = new Initialize();
+        Calculations calculations = new Calculations();
+        System.out.println("\nDealers Cards: ");
         int dealerSum = initialize.generateCards();
-        while (dealerSum < cardSum){
+        while (dealerSum <= cardSum){
+            System.out.println("\nDealers Draws Another Card: ");
             dealerSum = hit(dealerSum);
         }
-
+        if (!calculations.isBust(dealerSum)){
+            System.out.println("\nDealer Wins");
+        }
+        else {
+            System.out.println("\nYou Win!");
+        }
     }
 }
