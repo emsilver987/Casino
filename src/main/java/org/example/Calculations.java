@@ -6,7 +6,7 @@ public class Calculations {
     }
     public boolean isBust(int cardSum){
         if (cardSum > 21){
-            System.out.println("You bust!");
+            System.out.println(Messages.getPlayerBustsMessage());
             return true;
         }
         else{
@@ -15,13 +15,13 @@ public class Calculations {
     }
     public void whoWon(int playerSum, int dealerSum){
         if (playerSum > dealerSum){
-            System.out.println("You won!"); //Put these messages in messages class
+            System.out.println(Messages.getPlayerWonMessage());
         }
         else if (playerSum < dealerSum){
-            System.out.println("Dealer won!");
+            System.out.println(Messages.getDealerWonMessage());
         }
         else{
-            System.out.println("Invalid");
+            System.out.println(Messages.getInvalidMessage());
         }
     }
 }

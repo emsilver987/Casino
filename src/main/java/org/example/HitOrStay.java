@@ -37,10 +37,10 @@ public class HitOrStay {
             dealerSum = hit(dealerSum);
         }
         if (!calculations.isBust(dealerSum)){
-            System.out.println("\nDealer Wins");
+            System.out.println(Messages.getDealerWonMessage());
         }
         else {
-            System.out.println("\nYou Win!");
+            System.out.println(Messages.getPlayerWonMessage());
         }
     }
 }
