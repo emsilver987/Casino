@@ -1,4 +1,4 @@
-package org.example;
+package org.example.blackjack;
 
 public class Messages {
     private static final String welcome = "Welcome To The Casino\nYour Balance Starts at 1000 coins"; //Eventaully want to have incremenet and decrement
@@ -9,7 +9,8 @@ public class Messages {
     private static final String playerScore = "Your Cards Total: ";
     private static final String invalidMessage = "Invalid Message";
     private static final String playerWon = "You won!";
-    private static final String dealerWon = "Dealerwon!";
+    private static final String dealerWon = "Dealer won!";
+    private static final String generalBust = "Bust!";
 
     public static String getWelcomeMessage() {
         return welcome;
@@ -37,5 +38,8 @@ public class Messages {
     }
     public static String getDealerWonMessage() {
         return dealerWon;
+    }
+    public static String getGeneralBustMessage() {
+        return generalBust;
     }
 }

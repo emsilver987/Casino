@@ -1,4 +1,4 @@
-package org.example;
+package org.example.blackjack;
 import java.util.Random;
 
 enum Rank {

@@ -1,6 +1,4 @@
-package org.example;
-
-import java.util.Scanner;
+package org.example.blackjack;
 
 public class HitOrStay {
     public int determineHitOrStay(String userInput, int cardSum) {
@@ -26,7 +24,6 @@ public class HitOrStay {
         }
         return cardSum;
     }
-    // Function Responsible for Dealer Dealing
     public void stay(int cardSum){
         Initialize initialize = new Initialize();
         Calculations calculations = new Calculations();

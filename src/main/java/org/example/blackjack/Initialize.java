@@ -1,4 +1,4 @@
-package org.example;
+package org.example.blackjack;
 
 public class Initialize {
    public int generateCards(){
@@ -21,3 +21,7 @@ public class Initialize {
    }
 
 }
+//Abstraction: Hand, Behvaior: getSum
+//Deck needs to be an object, deck can contain objects of card
+//If we take card out we need to subtract it from file
+//
