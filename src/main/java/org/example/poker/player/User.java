@@ -1,6 +1,8 @@
 package org.example.poker.player;
 import org.example.poker.Card;
+import org.example.poker.Deck;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class User {
@@ -10,8 +12,9 @@ public class User {
     Random random = new Random();
 
     User(){
-        this.cardOne = new Card();
-        this.cardTwo = new Card();
+        Deck sharedDeck = Deck.getInstance();
+        Card cardOne = sharedDeck.getRandomCard();
+        Card cardTwo = sharedDeck.getRandomCard();
         money = 100;
         playing = true;
     }
