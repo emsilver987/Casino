@@ -1,8 +1,6 @@
 package org.example.poker.player;
 import org.example.poker.Card;
 import org.example.poker.Deck;
-
-import java.util.HashMap;
 import java.util.Random;
 
 public class User {
@@ -19,6 +17,15 @@ public class User {
         playing = true;
     }
 
+    public Card getCardOne() {
+        return cardOne;
+    }
+    public Card getCardTwo(){
+        return cardTwo;
+    }
+    public int getMoney() {
+        return money;
+    }
     public boolean isPlaying(){
         return playing;
     }
