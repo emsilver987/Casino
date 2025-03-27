@@ -34,18 +34,18 @@ public class Deck {
         }
     }
 
-    public Map<String, Card> getDeck() {
-        return deck;
-    }
-
     public Card getRandomCard() {
         List<Card> cards = new ArrayList<>(deck.values());
         int key = new Random().nextInt(cards.size());
-        // Make logic here to remove card from deck
+        removeCard(key);
         return cards.get(key);
     }
 
-    public void removeCard(String key) {
-        deck.remove(key);
+    public void removeCard(int key) {
+        deck.remove(String.valueOf(key));
+    }
+
+    public Map<String, Card> getDeck() {
+        return deck;
     }
 }
