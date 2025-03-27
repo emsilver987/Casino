@@ -8,6 +8,7 @@ public class TableActions {
     Players players;
     Table table;
     Scanner scanner = new Scanner(System.in);
+    Boolean blindPlaced = false;
 
     public TableActions(Players player) {
         this.players = player;
@@ -29,15 +30,19 @@ public class TableActions {
     }
 
     public void call(){
+        if (blindPlaced){
+            return;
+        }
         int buyIn = table.getBuyIn();
         table.addAccumulatedMoney(buyIn);
         players.subtractMoney(buyIn);
+        blindPlaced = true;
     }
 
     public void raise(int amount){
-        int tableMoney = table.getAccumulatedMoney();
         players.subtractMoney(amount);
         table.addAccumulatedMoney(amount);
+        blindPlaced = true;
     }
 
     public void fold(){

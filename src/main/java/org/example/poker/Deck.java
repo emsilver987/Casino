@@ -44,6 +44,7 @@ public class Deck {
     public void removeCard(int key) {
         deck.remove(String.valueOf(key));
         // This could cause problems, need to make sure that we don't try to access an element that is not there
+        // It is actually able to get the same card twice -- need to fix this
     }
 
     public Map<String, Card> getDeck() {

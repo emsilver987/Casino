@@ -39,7 +39,7 @@ public class User implements Players {
     @Override
     public void subtractMoney(int amount) {
         money -= amount;
-        System.out.println(amount + " coins have been taken from your account\nThis brings your balance down to: " + money);
+        System.out.println("Your Balance: " + money);
     }
 
     @Override

@@ -20,7 +20,11 @@ public class pokerPlay {
         System.out.println(messages.getUnderTheGunChoieMessage());
         tableActions.tableChoice(scanner.nextInt());
         cardStages.flop();
+        System.out.println(messages.getChoieMessage());
+        tableActions.tableChoice(scanner.nextInt());
         cardStages.Turn();
+        System.out.println(messages.getChoieMessage());
+        tableActions.tableChoice(scanner.nextInt());
         cardStages.River();
     }
 

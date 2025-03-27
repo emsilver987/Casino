@@ -7,7 +7,7 @@ public class Messages {
     private static final String flopMessage = "Flop - Cards Dealt: ";
     private static final String turnMessage = "Turn - Cards Dealt: ";
     private static final String riverMessage = "River - Cards Dealt: ";
-    private static final String underTheGunChoieMessage = "Call(1), Raise(2), Fold(3)";
+    private static final String underTheGunChoieMessage = "The blind is 10 coins\nCall(1), Raise(2), Fold(3)";
     private static final String choieMessage = "Check(1), Raise(2), Fold(3)";
 
     public String getWelcomePokerMessage() {

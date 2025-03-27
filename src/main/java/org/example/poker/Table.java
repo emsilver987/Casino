@@ -50,7 +50,7 @@ public class Table {
     }
 
     public void addAccumulatedMoney(int amount) {
-        accumulatedMoney =+ amount;
+        accumulatedMoney += amount;
     }
 
     public int getBuyIn() {
