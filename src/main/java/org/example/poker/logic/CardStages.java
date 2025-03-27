@@ -10,17 +10,18 @@ public class CardStages {
     Messages messages;
     Deck deck;
     Table table;
-    Players user;
+    Players players;
 
-    public CardStages() {
+    public CardStages(Players players) {
         this.messages = new Messages();
         this.deck = Deck.getInstance();
         this.table = Table.getInstance();
+        this.players = players;
     }
 
     public void preFlop(){
-        Card cardOne = user.getCardOne();
-        Card cardTwo = user.getCardTwo();
+        Card cardOne = players.getCardOne();
+        Card cardTwo = players.getCardTwo();
         String cardOneString = cardOne.toString();
         String cardTwoString = cardTwo.toString();
         System.out.println(cardOneString + " " + cardTwoString);

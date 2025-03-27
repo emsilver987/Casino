@@ -4,7 +4,7 @@ import org.example.poker.Deck;
 import java.util.Random;
 
 public class User implements Players {
-    private int money;
+    private int money = 100;
     private boolean playing;
     Card cardOne;
     Card cardTwo;
@@ -13,7 +13,6 @@ public class User implements Players {
         Deck sharedDeck = Deck.getInstance();
         this.cardOne = sharedDeck.getRandomCard();
         this.cardTwo = sharedDeck.getRandomCard();
-        money = 100;
         playing = true;
     }
 

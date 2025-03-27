@@ -6,8 +6,8 @@ public class Table {
     Card cardThree;
     Card cardFour;
     Card cardFive;
-    int accumulatedMoney;
-    int buyIn;
+    int accumulatedMoney = 0;
+    int buyIn = 10;
     private static Table instance;
 
     private Table() {
@@ -17,8 +17,6 @@ public class Table {
         this.cardThree = sharedDeck.getRandomCard();
         this.cardFour = sharedDeck.getRandomCard();
         this.cardFive = sharedDeck.getRandomCard();
-        this.accumulatedMoney = accumulatedMoney;
-        this.buyIn = buyIn;
     }
 
     public static Table getInstance() {
@@ -52,7 +50,7 @@ public class Table {
     }
 
     public void addAccumulatedMoney(int amount) {
-        accumulatedMoney += amount;
+        accumulatedMoney =+ amount;
     }
 
     public int getBuyIn() {

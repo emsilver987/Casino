@@ -11,7 +11,7 @@ public class TableActions {
 
     public TableActions(Players player) {
         this.players = player;
-        Table table = Table.getInstance();
+        this.table = Table.getInstance();
     }
 
     public void tableChoice(int choice){
@@ -30,6 +30,7 @@ public class TableActions {
 
     public void call(){
         int buyIn = table.getBuyIn();
+        table.addAccumulatedMoney(buyIn);
         players.subtractMoney(buyIn);
     }
 
