@@ -11,12 +11,14 @@ public class CardStages {
     Deck deck;
     Table table;
     Players players;
+    SimulatedPlayers simulatedPlayers;
 
-    public CardStages(Players players) {
+    public CardStages(Players players) {//If we don't use the players constructor i can edit everything here back to user
         this.messages = new Messages();
         this.deck = Deck.getInstance();
         this.table = Table.getInstance();
         this.players = players;
+        this.simulatedPlayers = new SimulatedPlayers();
     }
 
     public void preFlop(){
@@ -26,6 +28,8 @@ public class CardStages {
         String cardTwoString = cardTwo.toString();
         System.out.println(cardOneString + " " + cardTwoString);
         System.out.println(messages.getPreFlopMessage());
+        simulatedPlayers
+
     }
 
     public void flop(){

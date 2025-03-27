@@ -18,6 +18,7 @@ public class pokerPlay {
         System.out.println(messages.getWelcomePokerMessage());
         cardStages.preFlop();
         System.out.println(messages.getUnderTheGunChoieMessage());
+        //Simulated Calls
         tableActions.tableChoice(scanner.nextInt());
         cardStages.flop();
         System.out.println(messages.getChoieMessage());
