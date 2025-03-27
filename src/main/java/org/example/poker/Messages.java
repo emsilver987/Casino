@@ -1,14 +1,14 @@
 package org.example.poker;
 
 public class Messages {
-    private final String welcomePokerMessage = "Welcome to poker";
-    private final String[] moneyMessage = {"You have ", " dollars"};
-    private final String preFlopMessage = "Dealer deals cards to you and 5 other players";
-    private final String flopMessage = "Flop - Cards Dealt: ";
-    private final String turnMessage = "Turn - Cards Dealt: ";
-    private final String riverMessage = "River - Cards Dealt: ";
-    private final String underTheGunChoieMessage = "Call(1), Raise(2), Fold(3)";
-    private final String choieMessage = "Check(1), Raise(2), Fold(3)";
+    private static final String welcomePokerMessage = "Welcome to poker";
+    private static final String[] moneyMessage = {"You have ", " dollars"};
+    private static final String preFlopMessage = "Dealer deals cards to you and 5 other players";
+    private static final String flopMessage = "Flop - Cards Dealt: ";
+    private static final String turnMessage = "Turn - Cards Dealt: ";
+    private static final String riverMessage = "River - Cards Dealt: ";
+    private static final String underTheGunChoieMessage = "Call(1), Raise(2), Fold(3)";
+    private static final String choieMessage = "Check(1), Raise(2), Fold(3)";
 
     public String getWelcomePokerMessage() {
         return welcomePokerMessage;

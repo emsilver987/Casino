@@ -3,7 +3,7 @@ import org.example.poker.Card;
 import org.example.poker.Deck;
 import java.util.Random;
 
-public class User {
+public class User implements Players {
     private Card cardOne, cardTwo;
     private int money;
     private boolean playing;
