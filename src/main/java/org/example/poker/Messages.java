@@ -21,13 +21,13 @@ public class Messages {
         return preFlopMessage;
     }
     public String getFlopMessage(String cardOne, String cardTwo, String cardThree) {
-        return flopMessage + cardOne + " " + cardTwo + " " + cardThree;
+        return flopMessage + " "+ cardOne + " " + cardTwo + " " + cardThree;
     }
-    public String getTurnMessage(Card cardFour) {
-        return turnMessage + cardFour;
+    public String getTurnMessage(String cardOne, String cardTwo, String cardThree, String cardFour) {
+        return turnMessage + " " + cardOne + " " + cardTwo + " " + cardThree + " " + cardFour;
     }
-    public String getRiverMessage(Card cardFive) {
-        return riverMessage + cardFive;
+    public String getRiverMessage(String cardOne, String cardTwo, String cardThree, String cardFour, String cardFive) {
+        return riverMessage + cardOne + " " + cardTwo + " " + cardThree + " " + cardFour + " "+ cardFive;
     }
     public String getUnderTheGunChoieMessage(){
         return underTheGunChoieMessage;

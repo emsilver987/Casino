@@ -42,4 +42,21 @@ public class CardStages {
         Card cardThree= table.getCard(3);
         System.out.println(messages.getFlopMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString()));
     }
+
+    public void Turn(){
+        Card cardOne= table.getCard(1);
+        Card cardTwo= table.getCard(2);
+        Card cardThree= table.getCard(3);
+        Card cardFour = table.getCard(4);
+        System.out.println(messages.getTurnMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString()));
+    }
+
+    public void River(){
+        Card cardOne= table.getCard(1);
+        Card cardTwo= table.getCard(2);
+        Card cardThree= table.getCard(3);
+        Card cardFour = table.getCard(4);
+        Card cardFive = table.getCard(5);
+        System.out.println(messages.getRiverMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString(), cardFive.toString()));
+    }
 }

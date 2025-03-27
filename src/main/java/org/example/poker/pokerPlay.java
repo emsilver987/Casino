@@ -17,6 +17,8 @@ public class pokerPlay {
         String underGunChoice = scanner.nextLine();
         // Logic for underGun
         cardStages.flop();
+        cardStages.Turn();
+        cardStages.River();
     }
 
 }
