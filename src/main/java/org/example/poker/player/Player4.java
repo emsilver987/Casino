@@ -32,5 +32,10 @@ public class Player4 implements Players {
         return playing;
     }
 
+    @Override
+    public void setPlaying(boolean playing) {
+
+    }
+
 }
 

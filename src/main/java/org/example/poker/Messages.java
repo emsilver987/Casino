@@ -20,8 +20,8 @@ public class Messages {
     public String getPreFlopMessage() {
         return preFlopMessage;
     }
-    public String getFlopMessage(Card cardOne, Card cardTwo, Card cardThree) {
-        return flopMessage + cardOne + cardTwo + cardThree;
+    public String getFlopMessage(String cardOne, String cardTwo, String cardThree) {
+        return flopMessage + cardOne + " " + cardTwo + " " + cardThree;
     }
     public String getTurnMessage(Card cardFour) {
         return turnMessage + cardFour;

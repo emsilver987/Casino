@@ -32,5 +32,10 @@ public class User implements Players {
         return playing;
     }
 
+    @Override
+    public void setPlaying(boolean playing) {
+        this.playing = playing;
+    }
+
 
 }

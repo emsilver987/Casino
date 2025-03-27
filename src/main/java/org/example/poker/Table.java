@@ -18,7 +18,7 @@ public class Table {
         this.money = money;
     }
 
-    public Card getCard(int index) throws Exception {
+    public Card getCard(int index) {
         if (index == 1){
             return cardOne;
         }
@@ -34,9 +34,7 @@ public class Table {
         else if (index == 5){
             return cardFive;
         }
-        else {
-            throw new Exception("Something went wrong");
-        }
+        return null;
     }
     public int getMoney() {
         return money;
