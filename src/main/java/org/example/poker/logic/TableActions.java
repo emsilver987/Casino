@@ -2,12 +2,16 @@ package org.example.poker.logic;
 
 import org.example.poker.player.*;
 import org.example.poker.Table;
+import java.util.Scanner;
 
 public class TableActions {
     Players players;
+    Table table;
+    Scanner scanner = new Scanner(System.in);
 
     public TableActions(Players player) {
         this.players = player;
+        Table table = Table.getInstance();
     }
 
     public void tableChoice(int choice){
@@ -15,7 +19,9 @@ public class TableActions {
             call();
         }
         else if (choice == 2){
-            raise();
+            System.out.println("How much would you like to raise?");
+            int amount = scanner.nextInt();
+            raise(amount);
         }
         else if (choice == 3){
             fold();
@@ -23,14 +29,14 @@ public class TableActions {
     }
 
     public void call(){
-        //Needs to take money out of the players "account"
-
+        int buyIn = table.getBuyIn();
+        players.subtractMoney(buyIn);
     }
 
-    //Check function will do nothing
-
-    public void raise(){
-        //int how much raise, pass money paramter, figure out other logic
+    public void raise(int amount){
+        int tableMoney = table.getAccumulatedMoney();
+        players.subtractMoney(amount);
+        table.addAccumulatedMoney(amount);
     }
 
     public void fold(){

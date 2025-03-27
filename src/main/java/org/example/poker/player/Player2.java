@@ -37,4 +37,14 @@ public class Player2 implements Players {
 
     }
 
+    @Override
+    public void subtractMoney(int amount) {
+
+    }
+
+    @Override
+    public void addMoney(int amount) {
+
+    }
+
 }

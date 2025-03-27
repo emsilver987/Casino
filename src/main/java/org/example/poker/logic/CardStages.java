@@ -28,6 +28,7 @@ public class CardStages {
     }
 
     public void flop(){
+        System.out.println("Table has " + table.getAccumulatedMoney() + " in the pot");
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);
@@ -35,6 +36,7 @@ public class CardStages {
     }
 
     public void Turn(){
+        System.out.println("Table has " + table.getAccumulatedMoney() + " in the pot");
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);
@@ -43,6 +45,7 @@ public class CardStages {
     }
 
     public void River(){
+        System.out.println("Table has " + table.getAccumulatedMoney() + " in the pot");
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);

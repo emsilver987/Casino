@@ -37,4 +37,15 @@ public class User implements Players {
         this.playing = playing;
     }
 
+    @Override
+    public void subtractMoney(int amount) {
+        money -= amount;
+        System.out.println(amount + " coins have been taken from your account\nThis brings your balance down to: " + money);
+    }
+
+    @Override
+    public void addMoney(int amount) {
+        money += amount;
+    }
+
 }

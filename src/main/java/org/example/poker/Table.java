@@ -46,9 +46,15 @@ public class Table {
         }
         return null;
     }
+
     public int getAccumulatedMoney() {
         return accumulatedMoney;
     }
+
+    public void addAccumulatedMoney(int amount) {
+        accumulatedMoney += amount;
+    }
+
     public int getBuyIn() {
         return buyIn;
     }
