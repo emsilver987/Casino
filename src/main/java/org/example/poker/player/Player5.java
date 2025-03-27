@@ -11,7 +11,7 @@ public class Player5 implements Players {
     private boolean playing;
     Random random = new Random();
 
-    Player5(){
+    public Player5(){
         Deck sharedDeck = Deck.getInstance();
         Card cardOne = sharedDeck.getRandomCard();
         Card cardTwo = sharedDeck.getRandomCard();

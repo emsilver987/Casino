@@ -7,5 +7,5 @@ public interface Players {
     public Card getCardTwo();
     public int getMoney();
     public boolean isPlaying();
-
+    //public void setPlaying(boolean playing);
 }
