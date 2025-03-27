@@ -9,21 +9,13 @@ import org.example.poker.Table;
 public class CardStages {
     Messages messages;
     Deck deck;
-    Players players;
-    Players user;
     Table table;
+    Players user;
 
     public CardStages() {
         this.messages = new Messages();
         this.deck = Deck.getInstance();
-        this.user = new User();
-        this.table = new Table();
-
-        Players player1 = new Player1();
-        Players player2 = new Player2();
-        Players player3 = new Player3();
-        Players player4 = new Player4();
-        Players player5 = new Player5();
+        this.table = Table.getInstance();
     }
 
     public void preFlop(){
@@ -31,7 +23,6 @@ public class CardStages {
         Card cardTwo = user.getCardTwo();
         String cardOneString = cardOne.toString();
         String cardTwoString = cardTwo.toString();
-        // Need a call here to instatiate all other players the same way - not here
         System.out.println(cardOneString + " " + cardTwoString);
         System.out.println(messages.getPreFlopMessage());
     }

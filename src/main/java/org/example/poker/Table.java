@@ -6,16 +6,26 @@ public class Table {
     Card cardThree;
     Card cardFour;
     Card cardFive;
-    int money;
+    int accumulatedMoney;
+    int buyIn;
+    private static Table instance;
 
-    public Table(){
+    private Table() {
         Deck sharedDeck = Deck.getInstance();
         this.cardOne = sharedDeck.getRandomCard();
         this.cardTwo = sharedDeck.getRandomCard();
         this.cardThree = sharedDeck.getRandomCard();
         this.cardFour = sharedDeck.getRandomCard();
         this.cardFive = sharedDeck.getRandomCard();
-        this.money = money;
+        this.accumulatedMoney = accumulatedMoney;
+        this.buyIn = buyIn;
+    }
+
+    public static Table getInstance() {
+        if (instance == null) {
+            instance = new Table();
+        }
+        return instance;
     }
 
     public Card getCard(int index) {
@@ -36,8 +46,11 @@ public class Table {
         }
         return null;
     }
-    public int getMoney() {
-        return money;
+    public int getAccumulatedMoney() {
+        return accumulatedMoney;
+    }
+    public int getBuyIn() {
+        return buyIn;
     }
 
 }

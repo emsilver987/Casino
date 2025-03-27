@@ -37,5 +37,4 @@ public class User implements Players {
         this.playing = playing;
     }
 
-
 }

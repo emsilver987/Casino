@@ -14,8 +14,8 @@ public class pokerPlay {
         System.out.println(messages.getWelcomePokerMessage());
         cardStages.preFlop();
         System.out.println(messages.getUnderTheGunChoieMessage());
-        String underGunChoice = scanner.nextLine();
-        // Logic for underGun
+        int choice = scanner.nextInt();
+
         cardStages.flop();
         cardStages.Turn();
         cardStages.River();
