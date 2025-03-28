@@ -31,7 +31,7 @@ To run the project, follow these steps:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd Casinno
+    cd Casino
     ```
 3. Compile and run the Blackjack game:
     ```bash
