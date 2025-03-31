@@ -37,15 +37,18 @@ public class TableActions {
         table.addAccumulatedMoney(buyIn);
         players.subtractMoney(buyIn);
         blindPlaced = true;
+        System.out.println("Your Balance: " + players.getMoney());
     }
 
     public void raise(int amount){
         players.subtractMoney(amount);
         table.addAccumulatedMoney(amount);
         blindPlaced = true;
+        System.out.println("Your Balance: " + players.getMoney());
     }
 
     public void fold(){
         players.setPlaying(false);
+        System.out.println("Your Balance: " + players.getMoney());
     }
 }

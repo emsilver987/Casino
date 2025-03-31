@@ -37,9 +37,9 @@ public class User implements Players {
     }
 
     @Override
-    public void subtractMoney(int amount) {
+    public int subtractMoney(int amount) {
         money -= amount;
-        System.out.println("Your Balance: " + money);
+        return money;
     }
 
     @Override

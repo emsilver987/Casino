@@ -37,8 +37,9 @@ public class Player3 implements Players {
     }
 
     @Override
-    public void subtractMoney(int amount) {
+    public int subtractMoney(int amount) {
         money -= amount;
+        return money;
     }
 
     @Override

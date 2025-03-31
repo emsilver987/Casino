@@ -8,6 +8,6 @@ public interface Players {
     public int getMoney();
     public boolean isPlaying();
     public void setPlaying(boolean playing);
-    public void subtractMoney(int amount);
+    public int subtractMoney(int amount);
     public void addMoney(int amount);
 }

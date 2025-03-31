@@ -28,8 +28,7 @@ public class CardStages {
         String cardTwoString = cardTwo.toString();
         System.out.println(cardOneString + " " + cardTwoString);
         System.out.println(messages.getPreFlopMessage());
-        simulatedPlayers
-
+        //simulatedPlayers
     }
 
     public void flop(){
