@@ -49,7 +49,7 @@ public class Player5 implements Players {
     }
 
     public String getUser(){
-        return "Player5";
+        return "Player 5";
     }
 
 }

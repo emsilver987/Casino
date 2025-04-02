@@ -48,7 +48,7 @@ public class Player4 implements Players {
     }
 
     public String getUser(){
-        return "Player4";
+        return "Player 4";
     }
 
 }

@@ -48,6 +48,6 @@ public class Player3 implements Players {
     }
 
     public String getUser(){
-        return "Player3";
+        return "Player 3";
     }
 }
