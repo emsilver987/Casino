@@ -23,8 +23,9 @@ public class SimulatedTableActions implements TableActions {
             call();
         }
         else if (choice == 2){
-            int amount = random.nextInt(30) + 1;
-            raise(amount);
+            int[] amount = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50};
+            int number = amount[random.nextInt(9)];
+            raise(number);
         }
         else if (choice == 3){
             fold();
