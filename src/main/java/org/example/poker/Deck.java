@@ -35,17 +35,16 @@ public class Deck {
     }
 
     public Card getRandomCard() {
-        List<Card> cards = new ArrayList<>(deck.values());
-        int key = new Random().nextInt(cards.size());
-        removeCard(key);
-        return cards.get(key);
+        if (deck.isEmpty()) {
+            throw new IllegalStateException("No cards left in the deck!");
+        }
+        List<String> keys = new ArrayList<>(deck.keySet());
+        int index = new Random().nextInt(keys.size());
+        String cardKey = keys.get(index);
+        Card selectedCard = deck.remove(cardKey);
+        return selectedCard;
     }
 
-    public void removeCard(int key) {
-        deck.remove(String.valueOf(key));
-        // This could cause problems, need to make sure that we don't try to access an element that is not there
-        // It is actually able to get the same card twice -- need to fix this
-    }
 
     public Map<String, Card> getDeck() {
         return deck;
