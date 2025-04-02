@@ -48,4 +48,8 @@ public class Player5 implements Players {
         money += amount;
     }
 
+    public String getUser(){
+        return "Player5";
+    }
+
 }
