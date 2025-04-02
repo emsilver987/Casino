@@ -32,7 +32,7 @@ public class CardStages {
     }
 
     public void flop(){
-        System.out.println("Table Balance: " + table.getAccumulatedMoney());
+        System.out.println("-----Table Balance: " + table.getAccumulatedMoney() + "-----"); //Duplicate Code
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);
@@ -40,7 +40,7 @@ public class CardStages {
     }
 
     public void Turn(){
-        System.out.println("Table Balance:  " + table.getAccumulatedMoney());
+        System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);
@@ -49,7 +49,7 @@ public class CardStages {
     }
 
     public void River(){
-        System.out.println("Table Balance:  " + table.getAccumulatedMoney());
+        System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
         Card cardOne= table.getCard(1);
         Card cardTwo= table.getCard(2);
         Card cardThree= table.getCard(3);

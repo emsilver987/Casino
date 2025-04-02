@@ -37,6 +37,7 @@ public class SimulatedTableActions implements TableActions {
             return;
         }
         int buyIn = table.getBuyIn();
+        System.out.println(players.getUser() + " buys in for " + table.getBuyIn());
         table.addAccumulatedMoney(buyIn);
         players.subtractMoney(buyIn);
         blindPlaced = true;
@@ -45,7 +46,7 @@ public class SimulatedTableActions implements TableActions {
     public void raise(int amount){
         players.subtractMoney(amount);
         table.addAccumulatedMoney(amount);
-        blindPlaced = true;
+        blindPlaced = true; // This blindPlaced logic is not great
         System.out.println(players.getUser() + " raised " + amount);
     }
 

@@ -19,7 +19,7 @@ public class SimulatedPlayers {
 
     public void runSimulatedPlayers() {
         for (SimulatedTableActions playerAction : simulatedPlayers) {
-            int randomNum = rand.nextInt(2) + 1;
+            int randomNum = rand.nextInt(2) + 1; // Not truly random
             playerAction.tableChoice(randomNum);
         }
     }

@@ -36,19 +36,20 @@ public class UserTableActions implements TableActions {
         int buyIn = table.getBuyIn();
         table.addAccumulatedMoney(buyIn);
         players.subtractMoney(buyIn);
+        System.out.println("You buy in for " + table.getBuyIn());
         blindPlaced = true;
-        System.out.println("Your Balance: " + players.getMoney());
+        System.out.println("-----Your Balance: " + players.getMoney() + "-----"); //Duplicate code - refactor
     }
 
     public void raise(int amount){
         players.subtractMoney(amount);
         table.addAccumulatedMoney(amount);
         blindPlaced = true;
-        System.out.println("Your Balance: " + players.getMoney());
+        System.out.println("-----Your Balance: " + players.getMoney() + "-----");
     }
 
     public void fold(){
         players.setPlaying(false);
-        System.out.println("Your Balance: " + players.getMoney());
+        System.out.println("-----Your Balance: " + players.getMoney() + "-----");
     }
 }

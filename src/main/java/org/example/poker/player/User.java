@@ -47,4 +47,8 @@ public class User implements Players {
         money += amount;
     }
 
+    @Override
+    public String getUser() {
+        return "User";
+    }
 }

@@ -10,4 +10,5 @@ public interface Players {
     public void setPlaying(boolean playing);
     public int subtractMoney(int amount);
     public void addMoney(int amount);
+    public String getUser();
 }
