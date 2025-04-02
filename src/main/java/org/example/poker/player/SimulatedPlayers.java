@@ -1,18 +1,26 @@
 package org.example.poker.player;
 
-import org.example.poker.player.Players;
+import org.example.poker.logic.SimulatedTableActions;
+import java.util.Random;
 
 public class SimulatedPlayers {
-    Players[] players = {new Player1(), new Player2(),new Player3(),new Player4(),new Player5()};
+    private SimulatedTableActions[] simulatedPlayers;
+    private Random rand = new Random();
 
     public SimulatedPlayers() {
-        //this.players = {new Player1(), new Player2(),new Player3(),new Player4(),new Player5()};
+        simulatedPlayers = new SimulatedTableActions[] {
+                new SimulatedTableActions(new Player1()),
+                new SimulatedTableActions(new Player2()),
+                new SimulatedTableActions(new Player3()),
+                new SimulatedTableActions(new Player4()),
+                new SimulatedTableActions(new Player5())
+        };
     }
 
-    public void underTheGun() {
-        for (Players player : players){
-
+    public void runSimulatedPlayers() {
+        for (SimulatedTableActions playerAction : simulatedPlayers) {
+            int randomNum = rand.nextInt(2) + 1;
+            playerAction.tableChoice(randomNum);
         }
     }
-
 }
