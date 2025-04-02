@@ -19,6 +19,9 @@ public class SimulatedTableActions implements TableActions {
     }
 
     public void tableChoice(int choice){
+        if (!players.isPlaying()){
+            return;
+        }
         if (choice == 1){
             call();
         }
