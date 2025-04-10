@@ -55,6 +55,7 @@ public class HandRanking {
 
     private HandRank evaluate5CardHand(List<Card> hand) {
         return null;
+
         // Check for flush, straight, etc., and return an object representing the hand rank.
         // For instance, HandRank encapsulate the type (flush, straight, etc.) and tie-breaker values.
     }
