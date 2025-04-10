@@ -1,8 +1,10 @@
 package org.example.blackjack;
 
+import org.example.Game;
+
 import java.util.Scanner;
 
-public class blackjackPlay {
+public class blackjackPlay implements Game {
     public void run(){
         System.out.println(Messages.getWelcomeBlackjackMessage());
         Initialize initialize = new Initialize();

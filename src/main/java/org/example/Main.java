@@ -9,10 +9,19 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
+        UserBehavior behavior = new UserBehavior();
+        Game[] games = {
+                new blackjackPlay(),
+                new pokerPlay()
+        };
         System.out.println(Messages.getWelcomeMessage());
-        pokerPlay poker = new pokerPlay();
-        poker.run();
+        int userChoice = behavior.pickGame();
+        if (userChoice >= 0 && userChoice < games.length) {
+            games[userChoice].run();
+        } else {
+            System.out.println("Invalid choice.");
+        }
     }
-    // feat - display all players currently in
 }
