@@ -3,6 +3,7 @@ import org.example.poker.Card;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.example.poker.player.Players;
 import org.example.poker.Table;
@@ -28,9 +29,9 @@ public class HandRanking {
 
         for (List<Card> hand : combinations) {
             HandRank currentHand = evaluate5CardHand(hand);
-//            if (bestHand == null || currentHand.compareTo(bestHand) > 0) {
-//                bestHand = currentHand;
-//            }
+           if (bestHand == null || Objects.requireNonNull(currentHand).compareTo(bestHand) > 0) {
+               bestHand = currentHand;
+           }
         }
         return bestHand;
     }
