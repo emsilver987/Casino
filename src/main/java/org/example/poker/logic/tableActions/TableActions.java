@@ -1,4 +1,4 @@
-package org.example.poker.logic;
+package org.example.poker.logic.tableActions;
 
 public interface TableActions {
     void tableChoice(int choice);

@@ -1,4 +1,4 @@
-package org.example.poker.logic;
+package org.example.poker.logic.tableActions;
 
 import org.example.poker.player.*;
 import org.example.poker.Table;

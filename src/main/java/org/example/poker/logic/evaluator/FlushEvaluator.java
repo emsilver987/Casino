@@ -1,9 +1,12 @@
-package org.example.poker.logic;
+package org.example.poker.logic.evaluator;
 import org.example.poker.Card;
+import org.example.poker.logic.handRank.HandRank;
+import org.example.poker.logic.handRank.HandRankEvaluator;
+import org.example.poker.logic.handRank.HandRankType;
+
 import java.util.*;
 
 public class FlushEvaluator extends HandRankEvaluator {
-
 
     private boolean isFlush(List<Card> hand) {
         String firstSuit = hand.get(0).getSuit();
@@ -20,7 +23,6 @@ public class FlushEvaluator extends HandRankEvaluator {
         for (Card card : hand) {
             ranks.add(card.getRankIndex());
         }
-        // Sort descending for tie-breaking
         ranks.sort(Comparator.reverseOrder());
         return ranks;
     }

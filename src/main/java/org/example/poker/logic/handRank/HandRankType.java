@@ -1,4 +1,4 @@
-package org.example.poker.logic;
+package org.example.poker.logic.handRank;
 
 public enum HandRankType {
     HIGH_CARD(1),

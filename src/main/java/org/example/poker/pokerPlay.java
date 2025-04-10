@@ -1,7 +1,7 @@
 package org.example.poker;
 import org.example.Game;
 import org.example.poker.logic.CardStages;
-import org.example.poker.logic.UserTableActions;
+import org.example.poker.logic.tableActions.UserTableActions;
 import org.example.poker.player.SimulatedPlayers;
 import org.example.poker.player.User;
 

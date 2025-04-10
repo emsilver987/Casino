@@ -1,6 +1,6 @@
 package org.example.poker.player;
 
-import org.example.poker.logic.SimulatedTableActions;
+import org.example.poker.logic.tableActions.SimulatedTableActions;
 import java.util.Random;
 
 public class SimulatedPlayers {
