@@ -1,6 +1,7 @@
 package org.example.poker;
 import org.example.Game;
 import org.example.poker.logic.CardStages;
+import org.example.poker.logic.EndGame;
 import org.example.poker.logic.tableActions.UserTableActions;
 import org.example.poker.player.SimulatedPlayers;
 import org.example.poker.player.User;
@@ -15,6 +16,7 @@ public class pokerPlay implements Game {
     CardStages cardStages = new CardStages(user);
     UserTableActions tableActions = new UserTableActions(user);
     SimulatedPlayers simulatedPlayers = new SimulatedPlayers();
+    EndGame endGame = new EndGame();
 
     public void run(){
         System.out.println(messages.getWelcomePokerMessage());
@@ -31,6 +33,7 @@ public class pokerPlay implements Game {
         tableActions.tableChoice(scanner.nextInt());
         simulatedPlayers.runSimulatedPlayers();
         cardStages.River();
+        endGame.run(simulatedPlayers.getAllPlayers(user));
     }
 
 }

@@ -10,7 +10,7 @@ import org.example.poker.Table;
 public class HandRanking {
     Table table;
 
-    HandRanking(){
+    public HandRanking(){
         this.table = Table.getInstance();
     }
 
