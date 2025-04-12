@@ -1,4 +1,4 @@
-package org.example.poker;
+package org.example.poker.player;
 
 import org.example.poker.player.User;
 import org.junit.jupiter.api.Test;
