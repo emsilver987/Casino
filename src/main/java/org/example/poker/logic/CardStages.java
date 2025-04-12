@@ -26,10 +26,11 @@ public class CardStages {
         this.table = Table.getInstance();
         this.players = players;
         this.simulatedPlayers = new SimulatedPlayers();
-        Card cardOne= table.getCard(1);
-        Card cardTwo= table.getCard(2);
-        Card cardThree= table.getCard(3);
-        Card cardFour = table.getCard(4);
+        cardOne= table.getCard(1);
+        cardTwo= table.getCard(2);
+        cardThree= table.getCard(3);
+        cardFour = table.getCard(4);
+        cardFive = table.getCard(5);
         cardOnePlayer = players.getCardOne();
         cardTwoPlayer = players.getCardTwo();
     }
@@ -42,17 +43,21 @@ public class CardStages {
     }
 
     public void flop(){
-        System.out.println("-----Table Balance: " + table.getAccumulatedMoney() + "-----"); //Duplicate Code
+        tableBalanceMessage();
         System.out.println(messages.getFlopMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString()));
     }
 
     public void Turn(){
-        System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
+        tableBalanceMessage();
         System.out.println(messages.getTurnMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString()));
     }
 
     public void River(){
-        System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
+        tableBalanceMessage();
         System.out.println(messages.getRiverMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString(), cardFive.toString()));
+    }
+
+    public void tableBalanceMessage(){
+        System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
     }
 }
