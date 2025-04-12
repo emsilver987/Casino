@@ -38,6 +38,12 @@ public class User implements Players {
 
     @Override
     public int subtractMoney(int amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Amount to subtract cannot be negative.");
+        }
+        if (amount > money) {
+            throw new IllegalArgumentException("Insufficient funds: cannot subtract " + amount + " from " + money);
+        }
         money -= amount;
         return money;
     }
