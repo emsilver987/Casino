@@ -52,4 +52,5 @@ public class UserTableActions implements TableActions {
         players.setPlaying(false);
         System.out.println("-----Your Balance: " + players.getMoney() + "-----");
     }
+    // Game should stop for user
 }

@@ -33,6 +33,9 @@ public class SimulatedTableActions implements TableActions {
         else if (choice == 3){
             fold();
         }
+        else{
+            throw new IllegalArgumentException("Invalid table choice: " + choice);
+        }
     }
 
     public void call(){
