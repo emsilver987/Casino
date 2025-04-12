@@ -12,6 +12,13 @@ public class CardStages {
     Table table;
     Players players;
     SimulatedPlayers simulatedPlayers;
+    Card cardOnePlayer;
+    Card cardTwoPlayer;
+    Card cardOne;
+    Card cardTwo;
+    Card cardThree;
+    Card cardFour;
+    Card cardFive;
 
     public CardStages(Players players) {//If we don't use the players constructor i can edit everything here back to user
         this.messages = new Messages();
@@ -19,42 +26,33 @@ public class CardStages {
         this.table = Table.getInstance();
         this.players = players;
         this.simulatedPlayers = new SimulatedPlayers();
+        Card cardOne= table.getCard(1);
+        Card cardTwo= table.getCard(2);
+        Card cardThree= table.getCard(3);
+        Card cardFour = table.getCard(4);
+        cardOnePlayer = players.getCardOne();
+        cardTwoPlayer = players.getCardTwo();
     }
 
-    public void preFlop(){
-        Card cardOne = players.getCardOne();
-        Card cardTwo = players.getCardTwo();
-        String cardOneString = cardOne.toString();
-        String cardTwoString = cardTwo.toString();
+    public void preFlop() {
+        String cardOneString = cardOnePlayer.toString();
+        String cardTwoString = cardTwoPlayer.toString();
         System.out.println(cardOneString + " " + cardTwoString);
         System.out.println(messages.getPreFlopMessage());
-        //simulatedPlayers
     }
 
     public void flop(){
         System.out.println("-----Table Balance: " + table.getAccumulatedMoney() + "-----"); //Duplicate Code
-        Card cardOne= table.getCard(1);
-        Card cardTwo= table.getCard(2);
-        Card cardThree= table.getCard(3);
         System.out.println(messages.getFlopMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString()));
     }
 
     public void Turn(){
         System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
-        Card cardOne= table.getCard(1);
-        Card cardTwo= table.getCard(2);
-        Card cardThree= table.getCard(3);
-        Card cardFour = table.getCard(4);
         System.out.println(messages.getTurnMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString()));
     }
 
     public void River(){
         System.out.println("-----Table Balance:  " + table.getAccumulatedMoney() + "-----");
-        Card cardOne= table.getCard(1);
-        Card cardTwo= table.getCard(2);
-        Card cardThree= table.getCard(3);
-        Card cardFour = table.getCard(4);
-        Card cardFive = table.getCard(5);
         System.out.println(messages.getRiverMessage(cardOne.toString(), cardTwo.toString(), cardThree.toString(), cardFour.toString(), cardFive.toString()));
     }
 }
