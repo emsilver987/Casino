@@ -8,23 +8,23 @@ import java.util.Objects;
 public class Card {
         private String suit;
         private String rank;
-        private String rankIndex;
 
         public Card(String suit, String rank) {
             this.suit = suit;
-            this.rank = rank;
-            this.rankIndex = rank;
             if (Objects.equals(rank, "A")){
                 this.rank = "Ace";
             }
-            if (Objects.equals(rank, "K")){
+            else if (Objects.equals(rank, "K")){
                 this.rank = "King";
             }
-            if (Objects.equals(rank, "Q")){
+            else if (Objects.equals(rank, "Q")){
                 this.rank = "Queen";
             }
-            if (Objects.equals(rank, "J")){
+            else if (Objects.equals(rank, "J")){
                 this.rank = "Jack";
+            }
+            else{
+                this.rank = rank;
             }
         }
 
@@ -38,16 +38,16 @@ public class Card {
 
         // This is terrible practice but I will leave while i work on other things
         public int getRankIndex() {
-            if (Objects.equals(rank, "A")){
+            if (Objects.equals(rank, "Ace")){
                 return 14;
             }
-            else if (Objects.equals(rank, "K")){
+            else if (Objects.equals(rank, "King")){
                 return 13;
             }
-            else if (Objects.equals(rank, "Q")){
+            else if (Objects.equals(rank, "Queen")){
                 return 12;
             }
-            else if (Objects.equals(rank, "J")){
+            else if (Objects.equals(rank, "Jack")){
                 return 11;
             }
             else if (Objects.equals(rank, "10")){
@@ -75,9 +75,9 @@ public class Card {
                 return 3;
             }
             else if (Objects.equals(rank, "2")){
-                return 22;
+                return 2;
             }
-            return 100000;
+            return -1;
         }
 
         @Override
