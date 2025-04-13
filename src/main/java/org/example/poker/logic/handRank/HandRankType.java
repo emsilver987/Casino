@@ -1,6 +1,7 @@
 package org.example.poker.logic.handRank;
 
 public enum HandRankType {
+    TBD(0),
     HIGH_CARD(1),
     ONE_PAIR(2),
     TWO_PAIR(3),

@@ -1,6 +1,7 @@
 package org.example.poker.logic.evaluator;
 
 import org.example.poker.Card;
+import org.example.poker.logic.HandRankChain;
 import org.example.poker.logic.handRank.HandRank;
 import org.example.poker.logic.handRank.HandRankEvaluator;
 import org.example.poker.logic.handRank.HandRankType;
@@ -13,7 +14,7 @@ public class RoyalFlush extends HandRankEvaluator {
     private final FlushEvaluator flushEvaluator = new FlushEvaluator();
 
     @Override
-    protected HandRank evaluateIfMatches(List<Card> hand) {
+    public HandRank evaluateIfMatches(List<Card> hand) {
         HandRank straightRank = straightEvaluator.evaluateIfMatches(hand);
         HandRank flushRank = flushEvaluator.evaluateIfMatches(hand);
         if (straightRank != null && flushRank != null
@@ -28,6 +29,11 @@ public class RoyalFlush extends HandRankEvaluator {
                 return new HandRank(HandRankType.ROYAL_FLUSH, new ArrayList<>(royalRanks));
             }
         }
+
+        if (next != null) {
+            return next.evaluate(hand);
+        }
+
         return null;
     }
 }
