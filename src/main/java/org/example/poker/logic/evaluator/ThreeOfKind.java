@@ -9,7 +9,7 @@ import java.util.List;
 public class ThreeOfKind extends HandRankEvaluator {
 
     @Override
-    protected HandRank evaluateIfMatches(List<Card> hand) {
+    public HandRank evaluateIfMatches(List<Card> hand) {
         return null;
     }
 }

@@ -29,7 +29,7 @@ public class FlushEvaluator extends HandRankEvaluator {
     }
 
     @Override
-    protected HandRank evaluateIfMatches(List<Card> hand) {
+    public HandRank evaluateIfMatches(List<Card> hand) {
         if (isFlush(hand)) {
             List<Integer> tiebreakers = getSortedRanks(hand);
             return new HandRank(HandRankType.FLUSH, tiebreakers);

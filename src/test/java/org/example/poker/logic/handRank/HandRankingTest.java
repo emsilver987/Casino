@@ -3,9 +3,7 @@ package org.example.poker.logic.handRank;
 import org.example.poker.Card;
 import org.example.poker.Deck;
 import org.example.poker.logic.HandRankChain;
-import org.example.poker.logic.evaluator.FourOfKind;
-import org.example.poker.logic.evaluator.RoyalFlush;
-import org.example.poker.logic.evaluator.StraightFlush;
+import org.example.poker.logic.evaluator.*;
 import org.example.poker.player.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -116,8 +114,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        FullHouse fullHouse = new FullHouse();
+        HandRank rank = fullHouse.evaluateIfMatches(cards);
         assertEquals(HandRankType.FULL_HOUSE, rank.getType());
     }
 
@@ -134,8 +132,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        Flush flush = new Flush();
+        HandRank rank = flush.evaluateIfMatches(cards);
         assertEquals(HandRankType.FLUSH, rank.getType());
 
     }
@@ -153,8 +151,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        Straight straight = new Straight();
+        HandRank rank = straight.evaluateIfMatches(cards);
         assertEquals(HandRankType.STRAIGHT, rank.getType());
     }
 
@@ -172,8 +170,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        ThreeOfKind threeOfKind = new ThreeOfKind();
+        HandRank rank = threeOfKind.evaluateIfMatches(cards);
         assertEquals(HandRankType.THREE_OF_A_KIND, rank.getType());
     }
 
@@ -190,8 +188,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        TwoPair twoPair = new TwoPair();
+        HandRank rank = twoPair.evaluateIfMatches(cards);
         assertEquals(HandRankType.TWO_PAIR, rank.getType());
     }
 
@@ -208,8 +206,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        OnePair onePair = new OnePair();
+        HandRank rank = onePair.evaluateIfMatches(cards);
         assertEquals(HandRankType.ONE_PAIR, rank.getType());
     }
 
@@ -226,8 +224,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        HighCard highCard = new HighCard();
+        HandRank rank = highCard.evaluateIfMatches(cards);
         assertEquals(HandRankType.HIGH_CARD, rank.getType());
     }
 }
