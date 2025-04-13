@@ -9,7 +9,8 @@ import java.util.List;
 public class FullHouse extends HandRankEvaluator {
 
     @Override
-    public HandRank evaluateIfMatches(List<Card> hand) {
+    public
+    HandRank evaluateIfMatches(List<Card> hand) {
         return null;
     }
 }
