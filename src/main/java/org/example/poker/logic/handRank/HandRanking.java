@@ -36,7 +36,7 @@ public class HandRanking {
         return bestHand;
     }
 
-    public static List<List<Card>> generate5CardCombinations(List<Card> cards) {
+    public List<List<Card>> generate5CardCombinations(List<Card> cards) {
         List<List<Card>> combinations = new ArrayList<>();
         generateCombinationsHelper(cards, 0, new ArrayList<>(), combinations);
         return combinations;
