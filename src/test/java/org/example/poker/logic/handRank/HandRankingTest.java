@@ -196,8 +196,8 @@ public class HandRankingTest {
     @Test
     public void OnePair() {
         Card card = new Card("Diamonds", "2");
-        Card card2 = new Card("Hearts", "10");
-        Card card3 = new Card("Diamonds", "A");
+        Card card2 = new Card("Hearts", "4");
+        Card card3 = new Card("Diamonds", "2");
         Card card4 = new Card("Spades", "4");
         Card card5 = new Card("Clubs", "K");
         cards = new ArrayList<>();
