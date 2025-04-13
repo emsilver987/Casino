@@ -3,7 +3,9 @@ package org.example.poker.logic.handRank;
 import org.example.poker.Card;
 import org.example.poker.Deck;
 import org.example.poker.logic.HandRankChain;
+import org.example.poker.logic.evaluator.FourOfKind;
 import org.example.poker.logic.evaluator.RoyalFlush;
+import org.example.poker.logic.evaluator.StraightFlush;
 import org.example.poker.player.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -78,8 +80,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        StraightFlush straightFlush = new StraightFlush();
+        HandRank rank = straightFlush.evaluateIfMatches(cards);
         assertEquals(HandRankType.STRAIGHT_FLUSH, rank.getType());
     }
 
@@ -96,8 +98,8 @@ public class HandRankingTest {
         cards.add(card3);
         cards.add(card4);
         cards.add(card5);
-        RoyalFlush royalFlush = new RoyalFlush();
-        HandRank rank = royalFlush.evaluateIfMatches(cards);
+        FourOfKind fourOfKind = new FourOfKind();
+        HandRank rank = fourOfKind.evaluateIfMatches(cards);
         assertEquals(HandRankType.FOUR_OF_A_KIND, rank.getType());
     }
 

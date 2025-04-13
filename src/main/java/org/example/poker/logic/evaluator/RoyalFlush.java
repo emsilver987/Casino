@@ -30,10 +30,7 @@ public class RoyalFlush extends HandRankEvaluator {
             }
         }
 
-        if (next != null) {
-            return next.evaluate(hand);
-        }
-
+        if (next != null) {return next.evaluate(hand);}
         return null;
     }
 }
