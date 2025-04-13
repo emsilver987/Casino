@@ -1,16 +1,24 @@
 package org.example.poker.logic.handRank;
 
 import org.example.poker.Card;
+import org.example.poker.Deck;
 import org.example.poker.player.User;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.example.poker.logic.handRank.HandRankType;
 
 public class HandRankingTest {
 
     List<Card> cards;
+
+    @BeforeEach
+    void setUp() {
+        Deck.resetInstance();
+    }
 
     @Test
     public void test5CombinationsIs21() {
@@ -54,7 +62,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Royal Flush", rank);
+        assertEquals(HandRankType.ROYAL_FLUSH, rank);
     }
 
     @Test
@@ -77,7 +85,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Straight Flush", rank);
+        assertEquals(HandRankType.STRAIGHT_FLUSH, rank);
     }
 
     @Test
@@ -100,7 +108,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Four of a Kind", rank);
+        assertEquals(HandRankType.FOUR_OF_A_KIND, rank);
 
     }
 
@@ -124,7 +132,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Full House", rank);
+        assertEquals(HandRankType.FULL_HOUSE, rank);
 
     }
 
@@ -148,7 +156,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Flush", rank);
+        assertEquals(HandRankType.FLUSH, rank);
 
     }
 
@@ -172,7 +180,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Straight", rank);
+        assertEquals(HandRankType.STRAIGHT, rank);
     }
 
     @Test
@@ -195,7 +203,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Three of a Kind", rank);
+        assertEquals(HandRankType.THREE_OF_A_KIND, rank);
     }
 
     @Test
@@ -217,7 +225,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Two Pair", rank);
+        assertEquals(HandRankType.TWO_PAIR, rank);
     }
 
     @Test
@@ -240,7 +248,7 @@ public class HandRankingTest {
         cards.add(card7);
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("Flush", rank);
+        assertEquals(HandRankType.ONE_PAIR, rank);
     }
 
     @Test
@@ -261,9 +269,10 @@ public class HandRankingTest {
         cards.add(card5);
         cards.add(card6);
         cards.add(card7);
+
         HandRanking hr = new HandRanking();
         HandRank rank = hr.evaluateHand(user);
-        assertEquals("High Card", rank);
+        assertEquals(HandRankType.HIGH_CARD, rank);
     }
 }
 
