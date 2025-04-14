@@ -27,13 +27,11 @@ public class StraightEvaluator extends HandRankEvaluator {
                     break;
                 }
             }
-            System.out.println("Straight hand.");
             if (straight) return true;
         }
 
         // Special case: Ace-low straight (A-2-3-4-5)
         if (rankSet.contains(12) && rankSet.contains(0) && rankSet.contains(1) && rankSet.contains(2) && rankSet.contains(3)) {
-            System.out.println("Straight hand.");
             return true;
         }
 

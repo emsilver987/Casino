@@ -15,7 +15,6 @@ public class FlushEvaluator extends HandRankEvaluator {
                 return false;
             }
         }
-        System.out.println("Flush hand.");
         return true;
     }
 
