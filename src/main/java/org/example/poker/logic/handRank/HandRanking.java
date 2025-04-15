@@ -33,6 +33,7 @@ public class HandRanking {
                bestHand = currentHand;
            }
         }
+
         return bestHand;
     }
 

@@ -10,7 +10,8 @@ public class EndGame {
 
     public void run(Players[] players){
         for (Players player : players) {
-            handRanking.evaluateHand(player);
+            HandRank hand = handRanking.evaluateHand(player);
+            System.out.println(player.getUser() + hand.getType());
         }
     }
 

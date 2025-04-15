@@ -1,55 +1,93 @@
-# Casino Games Project
+---
 
-Welcome to my Casino Games Project! This project is a demonstration of my problem-solving skills and proficiency in Java. I have developed a fully functional Blackjack game that runs directly in the terminal, and I am currently completing a Poker game with simulated players.
+# 🎲 Casino Games Project
 
-## Features
-
-### ✅ **Blackjack Game**
-- Fully functional and interactive terminal-based Blackjack.
-- Follows standard Blackjack rules.
-- Includes betting, hit, stand, and double-down mechanics.
-- Designed with Object-Oriented Programming principles for clean and maintainable code.
-
-### 🔎 **Poker Game (In Progress)**
-- Near-complete Poker game with simulated players.
-- Players will make random yet strategic decisions using probability and decision logic.
-- Game features realistic poker rounds, including betting, folding, calling, and raising.
-- A fair deck system ensures cards are removed as they are played.
-- Dynamic game flow simulates the experience of playing at a real poker table.
-
-## Goals
-- Showcase my problem-solving abilities by developing complex game logic.
-- Demonstrate proficiency in Java, with a focus on OOP concepts.
-- Build simulations that provide an engaging and realistic player experience.
-
-## Installation
-To run the project, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/emsilver987/Casino.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd Casino
-    ```
-3. Compile and run the Blackjack game:
-    ```bash
-    javac Main.java
-    java Main
-    ```
-
-The Poker game will be available soon!
-
-## Future Plans
-- Complete and refine the Poker AI to make smarter decisions based on real poker strategies.
-- Add additional casino games for a complete casino experience.
-- Implement a graphical user interface for an enhanced gaming experience.
-
-## Contact
-If you'd like to learn more about the project or have any feedback, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ethan-silverthorne/) or reach out via email esilvert@purdue.edu
+Welcome to my **Casino Games Project** — a showcase of my Java development skills, object-oriented design, and problem-solving ability. This terminal-based application features two classic casino games: **Blackjack** and **Poker**, both designed with extensibility, clean code principles, and test-driven development (TDD) in mind.
 
 ---
 
-Thank you for checking out my Casino Games Project! 🎰
+## 🧠 Core Technologies & Principles
 
+- **Java 17**
+- **Object-Oriented Programming (OOP)** with SOLID principles
+- **Design Patterns** including *Chain of Responsibility* for poker hand evaluation
+- **JUnit** for **Test-Driven Development (TDD)** with extensive test coverage
+- **Modular Code Architecture** for maintainability and scalability
+
+---
+
+## ♠️ Features
+
+### ✅ **Blackjack (Fully Functional)**
+- Classic Blackjack with terminal interaction
+- Implements standard rules: hit, stand, double down, and betting system
+- Built using clean OOP design: player, dealer, and deck abstraction
+
+### ♣️ **Poker (In Progress)**
+- Simulated Texas Hold’em with 5 other players at the table
+- Each simulated player makes strategic decisions based on randomization and probability
+- Full game lifecycle: betting, calling, folding, raising, and showdown
+- Evaluator logic built using the **Chain of Responsibility** pattern for modularity and clarity
+- Deck and card management ensures card integrity and fairness
+- Robust unit tests for hand evaluations and gameplay scenarios
+
+---
+
+## 🧪 Testing & TDD
+
+All core logic is developed using **Test-Driven Development** with **JUnit 5**.  
+Tests include:
+- Blackjack game flow scenarios
+- Poker hand evaluation (e.g., flushes, full houses, pairs)
+- Deck shuffling and integrity
+- Simulated player behavior
+
+TDD helped significantly reduce debugging time and improve code reliability across complex logic paths.
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/emsilver987/Casino.git
+   ```
+
+2. Navigate to the project folder:
+   ```bash
+   cd Casino
+   ```
+
+3. Compile and run the game:
+   ```bash
+   javac Main.java
+   java Main
+   ```
+
+The Poker game is playable but still under development — refinements coming soon!
+
+---
+
+## 🌱 Future Plans
+
+- ✅ **Complete Poker logic and polish player AI**
+- 🎨 **Add a graphical user interface (GUI)** to enhance user experience
+- 🕹️ **Add more casino games** (e.g., Slots, Roulette, or Baccarat)
+- 📊 **Improve player behavior models** using probability-based strategies or ML simulations
+- 🌐 **Potential web deployment** using JavaScript or React for the front-end
+
+---
+
+## 🤝 Contact Me
+
+Want to collaborate, give feedback, or just chat about Java and game development?
+
+- [📧 esilvert@purdue.edu](mailto:esilvert@purdue.edu)
+- [🔗 LinkedIn: ethan-silverthorne](https://www.linkedin.com/in/ethan-silverthorne/)
+
+---
+
+Thanks for checking out my Casino Games Project!  
+Let’s deal in. 🎰🃏
+
+---
