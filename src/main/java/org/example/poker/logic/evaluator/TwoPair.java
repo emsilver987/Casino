@@ -9,6 +9,11 @@ import java.util.*;
 
 public class TwoPair extends HandRankEvaluator {
 
+    public TwoPair(){
+        OnePair onePair = new OnePair();
+        setNext(onePair);
+    }
+
     @Override
     public HandRank evaluateIfMatches(List<Card> hand) {
         Map<Integer, Integer> rankCounts = new HashMap<>();

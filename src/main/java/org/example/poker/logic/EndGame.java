@@ -11,7 +11,7 @@ public class EndGame {
     public void run(Players[] players){
         for (Players player : players) {
             HandRank hand = handRanking.evaluateHand(player);
-            System.out.println(player.getUser() + hand.getType());
+            System.out.println(player.getUser() + " " + hand.getType());
         }
     }
 

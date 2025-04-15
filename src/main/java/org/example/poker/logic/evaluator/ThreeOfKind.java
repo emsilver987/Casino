@@ -9,6 +9,11 @@ import java.util.*;
 
 public class ThreeOfKind extends HandRankEvaluator {
 
+    public ThreeOfKind(){
+        TwoPair twoPair = new TwoPair();
+        setNext(twoPair);
+    }
+
     @Override
     public HandRank evaluateIfMatches(List<Card> hand) {
         Map<Integer, Integer> rankCounts = new HashMap<>();

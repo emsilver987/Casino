@@ -2,7 +2,6 @@ package org.example.poker.logic.handRank;
 
 import org.example.poker.Card;
 import org.example.poker.Deck;
-import org.example.poker.logic.HandRankChain;
 import org.example.poker.logic.evaluator.*;
 import org.example.poker.player.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.example.poker.logic.handRank.HandRankType;
 
 public class HandRankingTest {
 
@@ -20,7 +18,6 @@ public class HandRankingTest {
     @BeforeEach
     void setUp() {
         Deck.resetInstance();
-        HandRankChain.startChain();
     }
 
     @Test

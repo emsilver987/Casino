@@ -1,7 +1,6 @@
 package org.example.poker.logic.evaluator;
 
 import org.example.poker.Card;
-import org.example.poker.logic.HandRankChain;
 import org.example.poker.logic.handRank.HandRank;
 import org.example.poker.logic.handRank.HandRankEvaluator;
 import org.example.poker.logic.handRank.HandRankType;
@@ -12,6 +11,11 @@ public class StraightFlush extends HandRankEvaluator {
 
     private final StraightEvaluator straightEvaluator = new StraightEvaluator();
     private final FlushEvaluator flushEvaluator = new FlushEvaluator();
+
+    public StraightFlush(){
+        FourOfKind fourOfKind = new FourOfKind();
+        setNext(fourOfKind);
+    }
 
     @Override
     public HandRank evaluateIfMatches(List<Card> hand) {

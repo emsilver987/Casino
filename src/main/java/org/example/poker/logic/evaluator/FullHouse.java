@@ -9,6 +9,11 @@ import java.util.*;
 
 public class FullHouse extends HandRankEvaluator {
 
+    public FullHouse(){
+        Flush flush = new Flush();
+        setNext(flush);
+    }
+
     @Override
     public HandRank evaluateIfMatches(List<Card> hand) {
         Map<Integer, Integer> rankCounts = new HashMap<>();

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import org.example.poker.logic.evaluator.RoyalFlush;
 import org.example.poker.player.Players;
 import org.example.poker.Table;
 
@@ -56,14 +57,11 @@ public class HandRanking {
         }
     }
 
-
     private HandRank evaluate5CardHand(List<Card> hand) {
-
-
-        return null;
-
-        // Check for flush, straight, etc., and return an object representing the hand rank.
-        // For instance, HandRank encapsulate the type (flush, straight, etc.) and tie-breaker values.
+        RoyalFlush royalFlush = new RoyalFlush();
+        HandRank handRank= royalFlush.evaluate(hand);
+        return handRank;
     }
+
 }
 
