@@ -48,6 +48,7 @@ public class HandRanking {
             combinations.add(new ArrayList<>(current));
             return;
         }
+
         for (int i = start; i < cards.size(); i++) {
             current.add(cards.get(i));
             generateCombinationsHelper(cards, i + 1, current, combinations);
@@ -55,7 +56,10 @@ public class HandRanking {
         }
     }
 
+
     private HandRank evaluate5CardHand(List<Card> hand) {
+
+
         return null;
 
         // Check for flush, straight, etc., and return an object representing the hand rank.
