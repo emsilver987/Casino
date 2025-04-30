@@ -14,7 +14,7 @@ public class EndGame {
     HandRanking handRanking = new HandRanking();
     Table table;
 
-    EndGame(){
+    public EndGame(){
         table = Table.getInstance();
     }
 
