@@ -29,6 +29,7 @@ public class EndGameTest {
 
     @BeforeEach
     void setUp() {
+        Table.resetInstance();
         this.table = Table.getInstance();
     }
 
@@ -41,7 +42,7 @@ public class EndGameTest {
         playersList.add(playerOne);
         table.addAccumulatedMoney(100);
         endGame.splitMoney(playersList);
-        assertEquals(100 - playerMoneyStart, playerOne.getMoney());
+        assertEquals(100 + playerMoneyStart, playerOne.getMoney());
     }
 
     @Test
@@ -55,8 +56,8 @@ public class EndGameTest {
         playersList.add(playerOne);
         table.addAccumulatedMoney(100);
         endGame.splitMoney(playersList);
-        assertEquals(100/2 - playerOneMoneyStart, playerOne.getMoney());
-        assertEquals(100/2 - playerTwoMoneyStart, playerTwo.getMoney());
+        assertEquals(100/2 + playerOneMoneyStart, playerOne.getMoney());
+        assertEquals(100/2 + playerTwoMoneyStart, playerTwo.getMoney());
     }
 
 }
