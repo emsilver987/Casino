@@ -22,7 +22,6 @@ public class EndGame {
     // Method that compares all players hand rank
         //Arg for list of all players, will return List of Players (may only be one)
         //Needs to compare kickers
-    //
 
 
     @Test
@@ -72,7 +71,5 @@ public class EndGame {
         assertEquals(100/3 - playerTwoMoneyStart, playerTwo.getMoney());
         assertEquals(100/3 - playerThreeMoneyStart, playerThree.getMoney());
     }
-
-
 
 }

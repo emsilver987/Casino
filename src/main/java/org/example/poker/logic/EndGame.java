@@ -5,6 +5,9 @@ import org.example.poker.logic.handRank.HandRankEvaluator;
 import org.example.poker.logic.handRank.HandRanking;
 import org.example.poker.player.Players;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EndGame {
     HandRanking handRanking = new HandRanking();
 
@@ -13,6 +16,48 @@ public class EndGame {
             HandRank hand = handRanking.evaluateHand(player);
             System.out.println(player.getUser() + " " + hand.getType());
         }
+        compareHandRanks(players);
     }
+
+    public List<Players> compareHandRanks(Players[] players){
+        List<Players> winners = new ArrayList<>();
+        HandRank bestRank = null;
+        for (Players player : players) {
+            HandRank currentRank = handRanking.evaluateHand(player);
+            if (bestRank == null) {
+                bestRank = currentRank;
+                winners.clear();
+                winners.add(player);
+            } else {
+                int comparison = currentRank.compareTo(bestRank);
+                if (comparison > 0) {
+                    bestRank = currentRank;
+                    winners.clear();
+                    winners.add(player);
+                } else if (comparison == 0) {
+                    boolean beatsAny = false;
+                    for (Players existingWinner : winners) {
+                        HandRank existingRank = handRanking.evaluateHand(existingWinner);
+                        if (currentRank.compareTo(existingRank) > 0) {
+                            bestRank = currentRank;
+                            winners.clear();
+                            winners.add(player);
+                            beatsAny = true;
+                            break;
+                        } else if (currentRank.compareTo(existingRank) < 0) {
+                            beatsAny = true;
+                            break;
+                        }
+                    }
+                    if (!beatsAny) {
+                        winners.add(player);
+                    }
+                }
+            }
+        }
+        return winners;
+    }
+
+
 
 }
