@@ -51,9 +51,10 @@ public class EndGameTest {
         Players playerOne = new Player1();
         Players playerTwo = new Player2();
         int playerOneMoneyStart = playerOne.getMoney();
-        int playerTwoMoneyStart = playerOne.getMoney();
+        int playerTwoMoneyStart = playerTwo.getMoney();
         List<Players> playersList = new ArrayList<>();
         playersList.add(playerOne);
+        playersList.add(playerTwo);
         table.addAccumulatedMoney(100);
         endGame.splitMoney(playersList);
         assertEquals(100/2 + playerOneMoneyStart, playerOne.getMoney());
