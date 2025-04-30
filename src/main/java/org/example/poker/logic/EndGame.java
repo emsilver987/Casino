@@ -3,13 +3,20 @@ package org.example.poker.logic;
 import org.example.poker.logic.handRank.HandRank;
 import org.example.poker.logic.handRank.HandRankEvaluator;
 import org.example.poker.logic.handRank.HandRanking;
+import org.example.poker.logic.tableActions.TableActions;
 import org.example.poker.player.Players;
+import org.example.poker.Table;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EndGame {
     HandRanking handRanking = new HandRanking();
+    Table table;
+
+    EndGame(){
+        table = Table.getInstance();
+    }
 
     public void run(Players[] players){
         for (Players player : players) {
@@ -19,6 +26,7 @@ public class EndGame {
         compareHandRanks(players);
     }
 
+    // Returns list of winning players
     public List<Players> compareHandRanks(Players[] players){
         List<Players> winners = new ArrayList<>();
         HandRank bestRank = null;
@@ -58,6 +66,11 @@ public class EndGame {
         return winners;
     }
 
-
+    public void splitMoney(List<Players> players){
+        int divisionOfPot = table.getAccumulatedMoney()/players.size();
+        for (Players player : players) {
+           player.addMoney(divisionOfPot);
+        }
+    }
 
 }
