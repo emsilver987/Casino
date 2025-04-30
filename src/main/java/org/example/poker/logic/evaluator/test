@@ -1,0 +1,15 @@
+
+
+class Node {
+    Node next;
+    int val;
+}
+
+class Test {
+    public static void main(String[] args) {
+    }
+    public Boolean checkIfMerger(){
+        for
+    }
+}
+

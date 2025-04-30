@@ -57,4 +57,9 @@ public class Table {
         return buyIn;
     }
 
+    // Only used for testing
+    public static void resetInstance() {
+        instance = null;
+    }
+
 }
