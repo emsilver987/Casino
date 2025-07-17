@@ -2,6 +2,10 @@
 
 # 🎲 Casino Games Project
 
+## Youtube Link to quick Demo
+https://youtu.be/S9k5kS_W6Ag
+
+
 Welcome to my **Casino Games Project** — a showcase of my Java development skills, object-oriented design, and problem-solving ability. This terminal-based application features two classic casino games: **Blackjack** and **Poker**, both designed with extensibility, clean code principles, and test-driven development (TDD) in mind.
 
 ---
@@ -83,7 +87,7 @@ The Poker game is playable but still under development — refinements coming so
 
 Want to collaborate, give feedback, or just chat about Java and game development?
 
-- [📧 esilvert@purdue.edu](mailto:esilvert@purdue.edu)
+- [📧 emsilver987@gmail.com](mailto:emsilver987@gmail.com)
 - [🔗 LinkedIn: ethan-silverthorne](https://www.linkedin.com/in/ethan-silverthorne/)
 
 ---
